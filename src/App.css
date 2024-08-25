@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto+Slab:wght@100..900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(30 41 51);
+  color: white;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background-color: rgb(251 146 60);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul li {
+  list-style: none;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+nav .icon-cart {
+  color: black;
+  font-size: 36px;
+  padding-right: 2.5rem;
+  position: relative;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.icon-cart .count {
+  position: absolute;
+  font-size: 11px;
+  color: white;
+  background-color: red;
+  bottom: 10px;
+  right: 38px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  max-width: 60rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  margin: 5rem auto;
+  grid-gap: 2rem;
+}
+
+.card-item {
+  padding: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.card-item:hover {
+  transform: scale(1.1);
+}
+
+.card img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+}
+
+.card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.card-body .rating {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(253 186 116);
+  border-radius: 50%;
+  font-size: 13px;
+  color: black;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.product-details {
+  max-width: 50rem;
+  margin: 10rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.product-image img {
+  width: 280px;
+  height: 300px;
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.5));
+}
+
+.product-info .description {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+
+.product-info button {
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  width: 18rem;
+  background-color: rgb(253 186 116);
+  font-weight: 600;
+  align-items: center;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  margin-top: 1rem;
+  letter-spacing: 1px;
+  font-size: 15px;
+}
+
+ .backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal {
+  min-width: 45rem;
+  padding: 0;
+  z-index: 2;
+  background: #d5c7bc;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  padding: 1rem;
+  border: none;
+  margin-top: 2rem;
+}
+
+.modal .modal-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal .quantity {
+  width: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal .add-icon,
+.remove-icon {
+  background-color: rgb(120 53 15);
+  color: white;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  display: flex;
+  width: 25px;
+  height: 25px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.modal .close {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal .close button {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+  padding: 2px 13px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.close .total {
+  font-weight: 800;
+}
